@@ -39,7 +39,7 @@ def processRequest(req):
     movie_name = getMovieName(req)
     if movie_name is None:
         return {}
-    en = {'apikey': '5f6ca20e', 't': movie_name}
+    en = {'apikey': '...', 't': movie_name}
     yql_url = baseurl + urlencode(en)
     result = urlopen(yql_url).read()
     data = json.loads(result)
